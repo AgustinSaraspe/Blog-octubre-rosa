@@ -216,7 +216,7 @@ svg{
    grid-template-columns: 1fr 1fr;
 }
 
-.h2Information{
+/* .h2Information{
     color: rgba(255, 255, 255, 0.669);
     font-family: 'Cormorant Garamond', serif;
     font-weight: 100;
@@ -224,7 +224,7 @@ svg{
     width: 100%;
     text-align: end;
     letter-spacing: 3px;
-}
+} */
 
 .seccion-1-img{
     width: 100%;
