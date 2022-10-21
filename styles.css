@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------------SVG---------------*/
+.line-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 900px;
+    text-align: center;
+    transform: translate(-20%, -10%);
+
+  } 
+  
+  svg {
+      display: inline-block;
+      height: 100%;
+   }
+
+.container-header{
+    height: 100vh;
+    width: 100%;
+    /* background-image: url("/Presentación1.jpg");
+    background-position: center;
+    background-size: cover;
+    padding-left:5%;
+    padding-right: 5%; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #FFA1CF;
+    position: relative;
+
+}
+/* background-color: #D885A3;
+background-color: #FFC4E1; */
+
+.div1{
+    background-color: #FFE6F7;
+    background-color: #FFA1CF;
+    background-color: #FFC4E1;
+    /* background-image: url(./fondo35.jpg);
+    background-image: url(./fonfo4.jpg);
+    background-image: url(./fondo44.jpg); */
+    background-color: #D885A3;
+    background-position: center;
+    background-size: cover;
+    border-right: 1px solid white;
+
+}
+
+.div2{
+    /* background-color: #FFE6F7; */
+    /* background-image: url(./fondo1.jpg);
+    background-position: center;
+    background-size: cover; */
+    background-color: #FFA1CF;
+    background-color: #FFE6F7;
+    background-color: #FCE2DB;
+    width: 100%;
+    height: 100%;
+}
+
+.btnLetsGo{
+    font-family: 'Cormorant Garamond', serif;
+    border: 1px solid #ffffff;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background: rgb(240, 234, 234);
+    padding: 30px 10px;
+    text-transform: uppercase;
+    border-radius: 50%;
+    animation: resplandor 2s linear infinite;
+}
+
+@keyframes resplandor{
+    0%{
+      box-shadow: 0 0 0 0 rgb(252, 251, 251),0 0 0 0 rgb(255, 254, 254);
+    }
+    30%{
+      box-shadow: 0 0 0 30px rgba(253, 251, 251, 0), 0 0 0 0 rgba(255, 254, 254, 0.6);
+        
+    }
+    65%{
+        box-shadow: 0 0 0 40px rgba(150, 149, 149, 0), 0 0 0 40px rgba(177, 174, 174, 0);
+
+    }
+    100%{
+
+        box-shadow: 0 0 0 0 rgb(240, 234, 234, 0),0 0 0 0 rgb(240, 234, 234, 0);
+    }
+}
+
+
+ 
+/* ---------------------NAV---------------*/
+
+.navbar{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: -1px 5px 5px -1px rgba(0,0,0,0.37);
+    -webkit-box-shadow: -1px 5px 5px -1px rgba(0,0,0,0.37);
+    -moz-box-shadow: -1px 5px 5px -1px rgba(0,0,0,0.37);
+    transition:1.5s, background 5.5s;
+    transition:0.5s, height 1.5s;
+}
+
+
+.navbar.active{
+    position: fixed;
+    z-index: 10;
+    background-color: #f5c4d6;
+    height: 30px;
+}
+
+.navbar.active nav ul li a{
+    color: white;
+    font-size: 16px;
+}
+.navbar.active nav ul{
+    transform: translate(27%, 0%);
+}
+
+.navbar nav ul li a{
+    transition:1.5s, font-size 1.5s;
+
+}
+
+  
+.logo{
+    padding-top: 30px; 
+    padding-left: 20px;
+    width: 1px;
+    cursor: pointer;
+    position: fixed;
+    display: none;
+}
+  
+.show{
+    display: block;
+    width: 50px;
+
+}
+
+
+
+  .navbar nav{
+      transform: translate(159%, 50%);
+      margin-bottom: 20px;
+  }
+  
+  .navbar nav ul li{
+      display: inline-block;
+      list-style: none;
+      margin: 0px 20px;
+  }
+  
+  .navbar nav ul li a{
+      font-family: 'Cormorant Garamond', serif;
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      letter-spacing: 1px;
+      font-weight: 500;
+  }
+  
+  
+/* ---------------------HEADER CONTENT------------------*/
+
+
+/* .header-text{
+   width: 700px;
+    transform: translate(10%,120%);
+} */
+
+.header-text h3{
+    font-family: 'Cormorant Garamond', serif;
+
+   font-size: 50px;
+   text-align:end;
+   padding-bottom: 10px;
+   color: #d93e77;
+}
+
+.header-text p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #d93e77;
+    margin-bottom: 40px;
+}
+
+.header-text{
+  width: 700px;
+  border-bottom:1px solid #d93e77;
+}
+
+.header-text{
+    transform: translate(20%,100%);
+    animation: texto 5s linear 1;
+}
+
+/* @keyframes texto{
+    0%{
+       transform: translate(180%, 160%);
+      }
+      30%{
+       transform: translate( 5%, 160%);
+      }
+} */
+
+.logoDiv1{
+    padding-top: 30px; 
+    padding-left: 20px;
+    width: 500px;
+    cursor: pointer;
+    transform: translate(35%, 25%);
+    z-index: 1;
+    animation: logo 5s  1;
+}
+
+@keyframes logo{
+    0%{
+        transform: translate(-100%, 30%);
+      }
+      30%{
+        transform: translate(100%, 30%);
+      }
+    
+}
+
+
+/* ---------------------Seccion 1------------------*/
+
+.seccion-1{
+    width: 100%;
+    height: 100vh;
+    /* display: grid;
+    grid-template-columns: 0.6fr 1fr; */
+    display: flex;
+    flex-direction: column;
+}
+
+.h2Information{
+    color: rgba(255, 255, 255, 0.669);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.543);
+    width: 840px;
+    text-align: end;
+    letter-spacing: 3px;
+    transform: translate(-10%, -120%);
+}
+
+/* background-color: #D75281; */
+
+
+.information1{
+    display: grid;
+    background-color: #D75281;
+    grid-template-columns: 1fr 1fr;
+}
+.seccion-1-img{
+    width: 100%;
+    height: 100vh;
+    background:center fixed url("./img111.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.seccion-1-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
+    /* border-right: 1px solid rgba(253, 248, 248, 0.625); */
+    box-shadow: -44px -1px 29px -35px rgba(0,0,0,0.33) inset;
+ -webkit-box-shadow: -44px -1px 29px -35px rgba(0,0,0,0.33) inset;
+ -moz-box-shadow: -44px -1px 29px -35px rgba(0,0,0,0.33) inset;
+ z-index: 1;
+
+}
+
+.s1-t1{
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+.s1-t2{
+    margin-top: 100px;
+} 
+
+
+.seccion-1-text h1{
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-weight: 100;
+    font-size: 35px;
+    text-align: justify;
+    border-bottom:1px solid rgba(255, 255, 255, 0.519);
+}
+
+.seccion-1-text p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.809);
+    text-align: left;
+    padding-bottom: 30px;
+    margin-right: 40px;
+
+}
+
+.seccion-1-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img1{
+    width: 100%;
+    height: 100vh;
+}
+
+.information2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #D75281;
+}
+
+.seccion-1-1-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
+    box-shadow: -44px -1px 29px -35px rgba(0,0,0,0.33) inset;
+ -webkit-box-shadow: -44px -1px 29px -35px rgba(0,0,0,0.33) inset;
+ -moz-box-shadow: -44px -1px 29px -35px rgba(0,0,0,0.33) inset;
+ z-index: 1;
+
+}
+.s2-t1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.s2-t2{
+    margin-top: 100px;
+} 
+
+
+.seccion-1-1-img{
+    width: 100%;
+    height: 100vh;
+    background:center fixed url("./fondo3333.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* .img2{
+    width: 100%;
+    height: 100vh;
+} */
+
+
+.seccion-1-1-text h1{
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-weight: 100;
+    font-size: 35px;
+    text-align: justify;
+    border-bottom:1px solid rgba(255, 255, 255, 0.519);
+}
+
+.seccion-1-1-text p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.809);
+    text-align: left;
+    padding-bottom: 30px;
+    margin-right: 40px;
+}
+
+
+
+/* ---------------------seccion 2------------------*/
+
+.seccion-2{
+    width: 100%;
+    height: 100vh;
+    /* display: grid;
+    grid-template-columns: 0.6fr 1fr; */
+    background: #FFA1CF;
+}
+
+/* ---------------------seccion 3------------------*/
+
+.seccion-3{
+    /* width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px; */
+    display: grid;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    width: 100%;
+    height: 1350px;
+    background-color: #D885A3;
+    background-color: #dd87a6;
+    background-color: #b65477;
+
+
+    
+}
+
+.s3-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    box-shadow: -2px 27px 19px -21px rgba(0,0,0,0.25) inset;
+    -webkit-box-shadow: -2px 27px 19px -21px rgba(0,0,0,0.25) inset;
+    -moz-box-shadow: -2px 27px 19px -21px rgba(0,0,0,0.25) inset;
+}
+
+.s3-header h2{
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+    font-size: 40px;
+    font-weight: 100;
+    margin-left: 30px;
+    transform: translate(0%,-50%);
+}
+.s3-header p{
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+    font-size: 23px;
+    text-align: start;
+    margin-left: 30px;
+    margin-bottom: 20px;
+
+}
+
+.img-S3{
+    width: 100%;
+    background:center fixed url("./fondoS3H.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cards-s3{
+    width: 100%;
+    height: 400px;
+    background-color: #d27898;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 50px;
+}
+
+.symton{
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    background-color: #e5789e;
+    padding: 20px;
+    box-shadow: 1px 3px 50px -1px rgba(0,0,0,0.44);
+    -webkit-box-shadow: 1px 3px 50px -1px rgba(0,0,0,0.44);
+    -moz-box-shadow: 1px 3px 50px -1px rgba(0,0,0,0.44);
+    display:grid;
+    z-index: 1;
+    transition:1.5s, background 1.5s;
+    
+}
+.symton:hover{
+    background: #b35c7a;
+}
+
+.symton h4{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    border-bottom: 1px solid white;
+}
+
+
+.symton p{
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.img-S3-2{
+    width: 100%;
+    background:center fixed url("./fondoS3H.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.btnCardS{
+    font-family: 'Cormorant Garamond', serif;
+    border: 1px solid white;
+    border-radius: 30px;
+    font-size: 15px;
+    background: #b35c7a00;
+    color: white;
+    padding: 8px;
+    transition:1.5s, background 1.5s;
+
+}
+.btnCardS:hover{
+    background: white;
+    color: #b35c7a;
+}
+
+/* ---------------------seccion 4------------------*/
+
+.seccion-4{
+    background: #f8b0ca;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-s4{
+    width: 100px;
+    height: 100px;
+}
+
+.s4-1{
+    width: 400px;
+    height: 500px;
+    transform: translate(50%, 50%);
+    position:absolute;
+    box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+-webkit-box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+-moz-box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+}
+.s4-2{
+    width: 450px;
+    height: 350px;
+    transform: translate(70%, 135%);    
+    box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+    -webkit-box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+    -moz-box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+}
+.s4-3{
+    width: 400px;
+    height: 450px;
+    transform: translate(22%, 40%);
+    box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+    -webkit-box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+    -moz-box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+}
+.s4-4{
+    width: 300px;
+    height: 380px;
+    transform: translate(-25%, 0%);
+    box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+    -webkit-box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+    -moz-box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+}
+.s4-5{
+    width: 350px;
+    height: 250px;
+    transform: translate(-80%, -190%);
+    box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+    -webkit-box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+    -moz-box-shadow: -1px 3px 48px -14px rgba(0,0,0,0.78);
+}
+
+.textS4 h1{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 150px;
+    color: white;
+    text-align: end;
+    transform: translate(24.9%, 100%);
+}
+
+.textS4 h2{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 100px;
+    color: white;
+    text-align: end;
+    transform: translate(21.8%, 195%);
+}
+
+.mar{
+    color: #fb5592;
+}
+
+.textS4{
+    z-index: 1;
+}
+
+@media all and  (max-width:500px){
+    .container-header{
+        display: none;
+
+    }
+
+ .logoDiv1{
+    width: 10px;
+ }
+}
